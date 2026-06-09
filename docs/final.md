@@ -1,5 +1,7 @@
 # MIZAN – Update Assessment
 
+> ⚠️ **Point-in-time assessment (snapshot).** This was an earlier review round, kept for the record. Its "Remaining Weaknesses" (water-loss methodology, false positives, quantified impact) are now addressed in the canonical spec and the verification log. **Canonical spec:** `docs/ميزان_MIZAN_v3_الكاملة_النهائية.md` · **Receipts:** `docs/VERIFICATION.md`.
+
 ## Executive Summary
 
 The recent updates significantly improve MIZAN's scientific credibility and defensibility.
