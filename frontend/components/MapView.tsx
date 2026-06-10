@@ -146,6 +146,7 @@ export default function MapView({
       center: [36.6, 31.4],
       zoom: 6.2,
       attributionControl: { compact: true },
+      preserveDrawingBuffer: true, // allow screenshot/export of the GL canvas
     });
     m.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-left");
     map.current = m;
