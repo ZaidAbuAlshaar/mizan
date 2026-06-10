@@ -1,0 +1,40 @@
+{
+  "type": "FeatureCollection",
+  "name": "azraq_basin_aoi",
+  "properties": {
+    "note_ar": "مضلع AOI مبدئي = bbox الأزرق من الدستور (TM-05). يُستبدل بمضلع HydroSHEDS hybas_7 أو ترسيم BGR–MWI قبل التشغيل النهائي.",
+    "note_en": "Initial AOI polygon = Azraq bbox from the constitution (TM-05). Replace with HydroSHEDS hybas_7 or BGR-MWI digitized basin boundary before the final run.",
+    "source": "plan.md TM-05 — lon 36.45–37.30, lat 31.55–32.25"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "azraq",
+        "name_ar": "حوض الأزرق (bbox مبدئي)",
+        "name_en": "Azraq basin (initial bbox)",
+        "kind": "aoi_bbox"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [36.45, 31.55],
+          [37.30, 31.55],
+          [37.30, 32.25],
+          [36.45, 32.25],
+          [36.45, 31.55]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "azraq_oasis",
+        "name_ar": "واحة الأزرق",
+        "name_en": "Azraq oasis",
+        "kind": "landmark"
+      },
+      "geometry": { "type": "Point", "coordinates": [36.816, 31.834] }
+    }
+  ]
+}

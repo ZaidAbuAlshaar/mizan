@@ -1,0 +1,5 @@
+# GEE pipeline (Max 1). The demo generator + P7 need NOTHING (stdlib only).
+earthengine-api>=1.0
+# optional, better forecasts (fallback works without them):
+# prophet>=1.1
+# pandas>=2.0

@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+backend/.venv/
+
+# Node / Next.js
+node_modules/
+frontend/.next/
+frontend/out/
+frontend/next-env.d.ts
+
+# Runtime state (PATCH overrides, real GEE exports stay out of git by default)
+data/runtime/
+data/fields.geojson
+data/basins.geojson
+data/forecast.json
+data/tws_series.json
+
+# Env / secrets
+.env
+.env.local
+*.local
+
+# OS
+.DS_Store
+Thumbs.db
