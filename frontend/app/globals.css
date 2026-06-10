@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  @apply bg-bg text-ink font-body antialiased;
+}
+
+@layer components {
+  .panel {
+    @apply bg-panel border border-line rounded-xl shadow-glass;
+  }
+  .btn {
+    @apply px-3 py-1.5 rounded-lg border border-line bg-panel2 hover:border-accent
+      transition-colors text-sm cursor-pointer select-none;
+  }
+  .chip {
+    @apply text-[11px] px-2 py-0.5 rounded-full border border-line;
+  }
+  .stat {
+    @apply font-head tabular-nums tracking-tight;
+  }
+}
+
+/* MapLibre dark tweaks */
+.maplibregl-popup-content {
+  background: #16213b;
+  color: #e9eefc;
+  border: 1px solid #243152;
+  border-radius: 10px;
+  font-family: var(--font-tajawal), system-ui, sans-serif;
+  padding: 8px 10px;
+}
+.maplibregl-popup-tip {
+  border-top-color: #16213b !important;
+  border-bottom-color: #16213b !important;
+}
+.maplibregl-ctrl-attrib {
+  font-size: 9px;
+  opacity: 0.5;
+}
+.maplibregl-ctrl-attrib a {
+  color: #94a4c6;
+}

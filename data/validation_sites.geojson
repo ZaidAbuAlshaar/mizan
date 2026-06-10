@@ -1,0 +1,90 @@
+{
+  "type": "FeatureCollection",
+  "name": "validation_sites",
+  "properties": {
+    "note_ar": "مواقع الإنفاذ الستة المؤكَّدة (TM-04 / P7). الإحداثيات تقريبية لمركز كل منطقة — كافية لـ P7 حسب الخطة، وتُدقَّق قبل العرض النهائي. المصادر محفوظة PDF (TM-06).",
+    "note_en": "The six confirmed enforcement sites (TM-04 / P7). Coordinates are approximate area centroids - sufficient for P7 per the plan; refine before the final pitch. Sources archived as PDF (TM-06).",
+    "geocode": "approximate",
+    "crs_note": "WGS84 lon/lat"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "wadi_as_seer",
+        "name_ar": "وادي السير",
+        "name_en": "Wadi As-Seer",
+        "date": "2025-08",
+        "detail_ar": "بئر مخفي بمزرعة: عمق 15م، مضختان غاطستان، >500 م³/يوم (بيان رسمي MWI)",
+        "detail_en": "Hidden farm well: 15 m deep, two submersible pumps, >500 m3/day (official MWI statement)",
+        "source": "MWI / Sarayanews-SarhaNews 8-2025 (archived PDF, TM-06)"
+      },
+      "geometry": { "type": "Point", "coordinates": [35.817, 31.945] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "kafrein_sweimeh",
+        "name_ar": "الكفرين / سويمة",
+        "name_en": "Kafrein / Sweimeh",
+        "date": "2025-11",
+        "detail_ar": "8 آبار تسحب 5,000 م³/ساعة + 3.8 كم كهرباء غير مشروعة",
+        "detail_en": "8 wells abstracting 5,000 m3/hour + 3.8 km illegal power lines",
+        "source": "Roya News 11-2025 royanews.tv/news/365318 (archived PDF)"
+      },
+      "geometry": { "type": "Point", "coordinates": [35.625, 31.84] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "kafrein_17",
+        "name_ar": "الكفرين — 17 بئراً",
+        "name_en": "Kafrein - 17 wells",
+        "date": "2025-05",
+        "detail_ar": "17 بئراً غير مرخّصة في حملة واحدة",
+        "detail_en": "17 unlicensed wells sealed in a single campaign",
+        "source": "Watana News 5-2025 watananews.com/452309 (archived PDF)"
+      },
+      "geometry": { "type": "Point", "coordinates": [35.647, 31.904] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "khan_zabib",
+        "name_ar": "خان الزبيب",
+        "name_en": "Khan Zabib",
+        "date": "2025-08",
+        "detail_ar": "حملة إنفاذ على آبار غير مرخّصة (طريق الصحراوي / لواء الموقّر)",
+        "detail_en": "Enforcement campaign on unlicensed wells (Desert Highway / Muwaqqar district)",
+        "source": "Sarha News 8-2025 (archived PDF)"
+      },
+      "geometry": { "type": "Point", "coordinates": [36.07, 31.6] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "jafr",
+        "name_ar": "الجفر",
+        "name_en": "Al-Jafr",
+        "date": "2025",
+        "detail_ar": "بئر بعمق 300م",
+        "detail_en": "Well drilled to 300 m depth",
+        "source": "MWI / press 2025 (archived PDF)"
+      },
+      "geometry": { "type": "Point", "coordinates": [36.21, 30.305] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "zarqa",
+        "name_ar": "الزرقاء",
+        "name_en": "Zarqa",
+        "date": "2026-02",
+        "detail_ar": "اعتداءات على خطوط ناقلة واستخدام غير مشروع",
+        "detail_en": "Attacks on conveyance lines and illegal use",
+        "source": "Roya News 2-2026 royanews.tv/news/373769 (archived PDF)"
+      },
+      "geometry": { "type": "Point", "coordinates": [36.088, 32.072] }
+    }
+  ]
+}
