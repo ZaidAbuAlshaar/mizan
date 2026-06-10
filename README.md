@@ -13,6 +13,9 @@
 | [`review-details.md`](review-details.md) | **تفاصيل المراجعة الكاملة** — كل نقاط الضعف والتحسينات حرفياً من القضاة الستة |
 | [`scenario.md`](scenario.md) | **السيناريو الكامل للتنفيذ** — تقسيم الإنسان×Claude ومسار الـ48 ساعة المحدث |
 | [`roadmap.md`](roadmap.md) | **خارطة التطوير** — ترقيات ما بعد الـ MVP (مصدرها الدستور v3 §20)؛ `review.md` أدقّ حيث يتقاطعان |
+| [`readiness-report.md`](readiness-report.md) | **تقرير الجاهزية التنفيذية** — تدقيق 6 فحوص (EXECUTABLE: YES)؛ العوائق المتبقية بشرية فقط |
+| [`design-brief.md`](design-brief.md) | **برومت Claude Design** — قائم بذاته، 5 شاشات + القيود الخمسة الحاكمة |
+| [`implementation-kickoff.md`](implementation-kickoff.md) | **بروتوكول جولة الديزاين ⇄ التنفيذ** — قائمة عودة الديزاين + أمر بدء التنفيذ |
 | [`CLAUDE.md`](CLAUDE.md) | **قواعد الجلسة لـ Claude Code** — يُقرأ تلقائياً كل جلسة: القواعد الذهبية وخريطة الملفات بدل لصق الوثائق |
 | [`docs/ميزان_MIZAN_v3_COMPLETE.md`](docs/ميزان_MIZAN_v3_COMPLETE.md) | **الدستور المعتمد (v3)** — المواصفة الكاملة (ماذا ولماذا): القصة، العلم، architecture، pipeline P1–P7، الشاشات، **§20 خارطة التطوير**. **مصدر الحقيقة الوحيد لكل رقم (§4)** · إحالات `plan.md` تتبع ترقيم v3 |
 | [`docs/ميزان_MIZAN_FINAL_v2.md`](docs/ميزان_MIZAN_FINAL_v2.md) | **v2 — مؤرشف** (v3 يدمجه ويزيد عليه؛ للرجوع فقط) |
