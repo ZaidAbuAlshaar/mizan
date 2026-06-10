@@ -7,6 +7,15 @@ import { api } from "@/lib/api";
 import LangToggle from "./LangToggle";
 import DemoBadge from "./DemoBadge";
 
+const ITEMS = [
+  { href: "/", icon: "🗺", key: "nav_map" },
+  { href: "/queue", icon: "📋", key: "nav_queue" },
+  { href: "/alerts", icon: "🔔", key: "nav_alerts" },
+  { href: "/basin/azraq", icon: "📉", key: "nav_basin" },
+  { href: "/impact", icon: "💧", key: "nav_impact" },
+  { href: "/methodology", icon: "🔬", key: "nav_method" },
+] as const;
+
 export default function Nav() {
   const { t } = useI18n();
   const path = usePathname();
@@ -20,49 +29,71 @@ export default function Nav() {
     });
   }, []);
 
-  const items = [
-    { href: "/", icon: "🗺", label: t("nav_map") },
-    { href: "/queue", icon: "📋", label: t("nav_queue") },
-    { href: "/alerts", icon: "🔔", label: t("nav_alerts") },
-    { href: "/basin/azraq", icon: "📉", label: t("nav_basin") },
-    { href: "/impact", icon: "💧", label: t("nav_impact") },
-    { href: "/methodology", icon: "🔬", label: t("nav_method") },
-  ];
+  const isActive = (href: string) =>
+    href === "/" ? path === "/" : path.startsWith(href.split("/").slice(0, 2).join("/"));
 
   return (
-    <header className="sticky top-0 z-30 border-b border-line bg-bg/85 backdrop-blur">
-      <div className="mx-auto flex max-w-[1400px] items-center gap-3 px-4 py-2.5">
-        <Link href="/" className="flex items-center gap-2">
-          <span className="grid h-7 w-7 place-items-center rounded-md bg-accent/15 text-accent">
-            ⚖
-          </span>
-          <span className="font-head text-lg font-extrabold">{t("brand")}</span>
-        </Link>
-        <nav className="mx-2 flex flex-1 flex-wrap gap-1 text-sm">
-          {items.map((it) => {
-            const active =
-              it.href === "/"
-                ? path === "/"
-                : path.startsWith(it.href.split("/").slice(0, 2).join("/"));
+    <>
+      {/* top bar */}
+      <header className="sticky top-0 z-40 border-b border-white/[0.06] bg-bg/70 backdrop-blur-xl">
+        <div className="mx-auto flex max-w-[1400px] items-center gap-3 px-4 py-2.5">
+          <Link href="/" className="group flex items-center gap-2">
+            <span className="grid h-8 w-8 place-items-center rounded-xl border border-accent/30 bg-accent/10 text-accent shadow-[0_0_18px_-6px_rgba(45,212,191,0.7)] transition-transform group-hover:scale-105">
+              ⚖
+            </span>
+            <span className="font-head text-lg font-extrabold tracking-tight">
+              {t("brand")}
+            </span>
+          </Link>
+
+          <nav className="mx-2 hidden flex-1 items-center gap-1 text-sm md:flex">
+            {ITEMS.map((it) => {
+              const active = isActive(it.href);
+              return (
+                <Link
+                  key={it.href}
+                  href={it.href}
+                  className={`relative rounded-lg px-3 py-1.5 transition-colors ${
+                    active ? "text-accent" : "text-muted hover:text-ink"
+                  }`}
+                >
+                  <span className="me-1 opacity-70">{it.icon}</span>
+                  {t(it.key)}
+                  {active && (
+                    <span className="absolute inset-x-2 -bottom-[11px] h-0.5 rounded-full bg-gradient-to-r from-accent to-accent2" />
+                  )}
+                </Link>
+              );
+            })}
+          </nav>
+
+          <div className="ms-auto flex items-center gap-2 md:ms-0">
+            <DemoBadge demo={demo} offline={offline} />
+            <LangToggle />
+          </div>
+        </div>
+      </header>
+
+      {/* mobile bottom tab bar (thumb zone) */}
+      <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-white/[0.06] bg-bg/85 backdrop-blur-xl md:hidden">
+        <div className="mx-auto grid max-w-[600px] grid-cols-6">
+          {ITEMS.map((it) => {
+            const active = isActive(it.href);
             return (
               <Link
                 key={it.href}
                 href={it.href}
-                className={`rounded-lg px-3 py-1.5 transition-colors ${
-                  active
-                    ? "border border-line bg-panel2 text-accent"
-                    : "text-muted hover:text-ink"
+                className={`flex flex-col items-center gap-0.5 py-2 text-[9px] transition-colors ${
+                  active ? "text-accent" : "text-muted"
                 }`}
               >
-                <span className="me-1 hidden sm:inline">{it.icon}</span>
-                {it.label}
+                <span className="text-base leading-none">{it.icon}</span>
+                <span className="max-w-[56px] truncate">{t(it.key)}</span>
               </Link>
             );
           })}
-        </nav>
-        <DemoBadge demo={demo} offline={offline} />
-        <LangToggle />
-      </div>
-    </header>
+        </div>
+      </nav>
+    </>
   );
 }

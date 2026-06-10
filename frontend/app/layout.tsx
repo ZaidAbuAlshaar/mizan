@@ -34,7 +34,7 @@ export default function RootLayout({
       <body>
         <I18nProvider>
           <Nav />
-          <main className="mx-auto max-w-[1400px] px-4 py-4">{children}</main>
+          <main className="mx-auto max-w-[1400px] px-4 py-5 md:py-7">{children}</main>
           <Footer />
         </I18nProvider>
       </body>

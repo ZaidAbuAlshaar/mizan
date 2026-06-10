@@ -27,46 +27,67 @@ export default function KpiStrip() {
 
   const cards: {
     label: string;
+    icon: string;
     node: ReactNode;
     tone: string;
+    glow: string;
+    hero?: boolean;
   }[] = [
     {
       label: t("kpi_red"),
+      icon: "🚩",
       tone: "text-red",
-      node: imp ? (
-        <Counter value={imp.red_fields} format={(n) => String(Math.round(n))} />
-      ) : null,
+      glow: "rgba(244,63,94,0.35)",
+      node: imp ? <Counter value={imp.red_fields} format={(n) => String(Math.round(n))} /> : null,
     },
     {
       label: t("kpi_m3"),
-      tone: "text-accent",
-      node: imp ? (
-        <Counter value={imp.recoverable_m3yr} format={(n) => fmtM3(n, lang)} />
-      ) : null,
+      icon: "💧",
+      tone: "hero-num",
+      glow: "rgba(45,212,191,0.4)",
+      hero: true,
+      node: imp ? <Counter value={imp.recoverable_m3yr} format={(n) => fmtM3(n, lang)} /> : null,
     },
     {
       label: t("kpi_val"),
+      icon: "🎯",
       tone: "text-green",
+      glow: "rgba(34,197,94,0.3)",
       node: val ? (
         <span className="stat">
-          {val.sites_covered}/{val.sites_total}
+          {val.sites_covered}
+          <span className="text-faint">/{val.sites_total}</span>
         </span>
       ) : null,
     },
     {
       label: t("kpi_crit"),
+      icon: "⏱",
       tone: "text-amber",
+      glow: "rgba(245,158,11,0.3)",
       node: crit ? <span className="stat ltr inline-block">{crit}</span> : null,
     },
   ];
 
   return (
-    <div className="grid grid-cols-2 gap-2 lg:grid-cols-4">
+    <div className="grid grid-cols-2 gap-2.5 lg:grid-cols-4">
       {cards.map((c) => (
-        <div key={c.label} className="panel px-4 py-3">
-          <div className="text-muted text-[11px]">{c.label}</div>
-          <div className={`mt-0.5 text-2xl ${c.tone}`}>
-            {c.node ?? <Skeleton className="h-7 w-16" />}
+        <div
+          key={c.label}
+          className="panel panel-hover relative overflow-hidden px-4 py-3.5"
+        >
+          <div
+            className="pointer-events-none absolute -end-6 -top-8 h-20 w-20 rounded-full blur-2xl"
+            style={{ background: c.glow }}
+          />
+          <div className="flex items-center gap-2">
+            <span className="grid h-7 w-7 place-items-center rounded-lg border border-white/[0.06] bg-white/[0.03] text-sm">
+              {c.icon}
+            </span>
+            <span className="label">{c.label}</span>
+          </div>
+          <div className={`mt-1.5 ${c.hero ? "text-3xl" : "text-2xl"} ${c.tone}`}>
+            {c.node ?? <Skeleton className="h-7 w-20" />}
           </div>
         </div>
       ))}
