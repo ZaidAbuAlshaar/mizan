@@ -80,7 +80,8 @@ def _score(first_seen: int, area_ha: float, expansion: float, dist_n: float,
     return min(score, 100), comp
 
 
-def _mk_field(i: int, lon: float, lat: float, basin: str, forced_green=False) -> dict:
+def _mk_field(i: int, lon: float, lat: float, basin: str, forced_green=False,
+              note=None) -> dict:
     area = round(rng.uniform(1.5, 38.0), 1)
     first_seen = rng.choices(
         [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],
@@ -110,33 +111,45 @@ def _mk_field(i: int, lon: float, lat: float, basin: str, forced_green=False) ->
                                   weights=[78, 10, 7, 5])[0],
             "ndvi_series": _ndvi_series(not forced_green),
             "verified_true": None,  # filled by inspectors (P7 precision@20)
+            "note": note,
             "demo": True,
         },
         "geometry": {"type": "Polygon", "coordinates": _square(lon, lat, area)},
     }
 
 
-def gen_fields() -> dict:
-    feats = []
-    # Azraq farm belt: clusters N/NE of the oasis (36.78–37.08, 31.78–32.12)
-    centers = [(36.83, 31.90), (36.95, 32.02), (37.04, 31.86), (36.78, 32.08)]
-    i = 1
+def _cluster(feats, i, centers, basin, per, spread=(0.05, 0.04), **kw):
     for cx, cy in centers:
-        for _ in range(12):
-            lon = cx + rng.uniform(-0.05, 0.05)
-            lat = cy + rng.uniform(-0.04, 0.04)
-            feats.append(_mk_field(i, lon, lat, "azraq")); i += 1
-    # a few deliberate greens (excluded by rules) for honest variety
-    for _ in range(4):
-        lon = 36.6 + rng.uniform(-0.05, 0.05)
-        lat = 31.62 + rng.uniform(-0.03, 0.03)
-        feats.append(_mk_field(i, lon, lat, "azraq", forced_green=True)); i += 1
-    # small clusters near 3 enforcement sites => P7 mechanic demo
+        for _ in range(per):
+            lon = cx + rng.uniform(-spread[0], spread[0])
+            lat = cy + rng.uniform(-spread[1], spread[1])
+            feats.append(_mk_field(i, lon, lat, basin, **kw))
+            i += 1
+    return i
+
+
+def gen_fields() -> dict:
+    feats: list = []
+    i = 1
+    # Azraq farm belt (most depleted, 215%): dense suspected clusters
+    i = _cluster(feats, i, [(36.83, 31.90), (36.95, 32.02), (37.04, 31.86),
+                            (36.78, 32.08), (36.90, 31.78)], "azraq", 12)
+    # deliberate greens (rain-fed / excluded) for honest variety
+    i = _cluster(feats, i, [(36.60, 31.62)], "azraq", 4, forced_green=True)
+    # Amman-Zarqa (176%): suspected fields + a treated-wastewater belt we EXCLUDE
+    i = _cluster(feats, i, [(36.00, 32.05), (36.22, 32.20), (35.95, 32.28)],
+                 "amman_zarqa", 7)
+    i = _cluster(feats, i, [(36.10, 32.08)], "amman_zarqa", 6,
+                 forced_green=True, note="treated_water")  # Zarqa river / As-Samra
+    # Yarmouk (144%)
+    i = _cluster(feats, i, [(35.90, 32.55), (36.10, 32.62)], "yarmouk", 8)
+    # red clusters at 3 real enforcement sites => P7 mechanic demo
     for site_lon, site_lat in [(35.625, 31.84), (36.07, 31.60), (36.21, 30.305)]:
         for _ in range(3):
             lon = site_lon + rng.uniform(-0.02, 0.02)
             lat = site_lat + rng.uniform(-0.02, 0.02)
-            f = _mk_field(i, lon, lat, "national"); i += 1
+            f = _mk_field(i, lon, lat, "national")
+            i += 1
             f["properties"]["score"] = max(f["properties"]["score"], 75)  # red
             feats.append(f)
     return {

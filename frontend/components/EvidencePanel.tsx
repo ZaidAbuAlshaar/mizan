@@ -78,9 +78,18 @@ export default function EvidencePanel({
           <ScoreBadge score={field.score} />
           <span className={`chip ${STATUS_TONE[status]}`}>{stLabel(status)}</span>
         </div>
-        <button className="btn" onClick={onClose} aria-label="close">
-          ✕
-        </button>
+        <div className="flex items-center gap-1.5">
+          <a
+            href={`/field/${encodeURIComponent(field.id)}`}
+            className="btn !py-1 text-xs"
+            title={t("open_full")}
+          >
+            ↗
+          </a>
+          <button className="btn" onClick={onClose} aria-label="close">
+            ✕
+          </button>
+        </div>
       </div>
 
       <div className="max-h-[68vh] overflow-y-auto">
@@ -99,6 +108,11 @@ export default function EvidencePanel({
           </div>
         </div>
 
+        {field.note === "treated_water" && (
+          <div className="mx-3 mb-2 rounded-lg border border-amber/40 bg-amber/10 px-3 py-1.5 text-xs text-amber">
+            ⚠ {t("excluded_treated")}
+          </div>
+        )}
         {field.lat != null && field.lon != null && (
           <div className="mx-3 mb-2 flex items-center justify-between rounded-lg border border-line bg-panel2 px-3 py-1.5">
             <span className="ltr stat text-xs text-muted">

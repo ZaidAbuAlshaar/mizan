@@ -23,6 +23,7 @@ export default function Nav() {
   const items = [
     { href: "/", icon: "🗺", label: t("nav_map") },
     { href: "/queue", icon: "📋", label: t("nav_queue") },
+    { href: "/alerts", icon: "🔔", label: t("nav_alerts") },
     { href: "/basin/azraq", icon: "📉", label: t("nav_basin") },
     { href: "/impact", icon: "💧", label: t("nav_impact") },
     { href: "/methodology", icon: "🔬", label: t("nav_method") },

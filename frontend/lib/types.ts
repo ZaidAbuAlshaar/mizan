@@ -25,6 +25,7 @@ export interface FieldProps {
   est_m3yr_high: number;
   status: Status;
   method?: string;
+  note?: string | null;
   demo?: boolean;
   ndvi_series?: { month: string; ndvi: number }[];
   score_components?: Record<string, number>;
