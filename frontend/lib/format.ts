@@ -26,3 +26,8 @@ export const levelDot: Record<string, string> = {
   amber: "🟠",
   green: "🟢",
 };
+
+/** Basin stress level (MWI % of safe yield): ≥150 red, ≥100 amber. */
+export function stressLevel(pct: number): "red" | "amber" | "green" {
+  return pct >= 150 ? "red" : pct >= 100 ? "amber" : "green";
+}

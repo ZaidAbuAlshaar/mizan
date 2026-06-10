@@ -13,6 +13,8 @@ export interface Meta {
 export interface FieldProps {
   id: string;
   basin: string;
+  lat?: number;
+  lon?: number;
   area_ha: number;
   first_seen_year: number;
   is_new: boolean;

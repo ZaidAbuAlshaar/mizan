@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Almarai, Tajawal } from "next/font/google";
 import { I18nProvider } from "@/lib/i18n";
 import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 
 const almarai = Almarai({
   subsets: ["arabic"],
@@ -20,7 +21,7 @@ const tajawal = Tajawal({
 export const metadata: Metadata = {
   title: "ميزان MIZAN — نوزِن مياه الأردن من الفضاء",
   description:
-    "Inspection-prioritization decision support for Jordan's groundwater — from space.",
+    "Inspection-prioritization decision support for Jordan's groundwater — from space. GRACE-FO + Sentinel-2 + AI.",
 };
 
 export default function RootLayout({
@@ -34,9 +35,7 @@ export default function RootLayout({
         <I18nProvider>
           <Nav />
           <main className="mx-auto max-w-[1400px] px-4 py-4">{children}</main>
-          <footer className="mx-auto max-w-[1400px] px-4 py-6 text-center text-[11px] text-muted">
-            ميزان — كل قطرة محسوبة من الفضاء · AstroCode 2026 · التحدي ٦ · Vcoders
-          </footer>
+          <Footer />
         </I18nProvider>
       </body>
     </html>

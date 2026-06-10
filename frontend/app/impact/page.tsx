@@ -33,24 +33,24 @@ export default function ImpactPage() {
 
       <div className="grid gap-3 sm:grid-cols-3">
         <div className="panel p-5 text-center">
-          <div className="text-muted text-xs">{t("recoverable")}</div>
-          <div className="mt-2 text-4xl text-accent">
+          <div className="text-muted text-xs">💧 {t("recoverable")}</div>
+          <div className="mt-2 text-5xl text-accent">
             {imp && <Counter value={imp.recoverable_m3yr} format={(n) => fmtM3(n, lang)} />}
           </div>
           <div className="text-muted mt-1 text-[11px]">
-            {imp && `${fmtInt(imp.recoverable_m3yr, lang)} م³`}
+            {imp && `${fmtInt(imp.recoverable_m3yr, lang)} م³ · ${imp.red_fields} 🔴`}
           </div>
         </div>
         <div className="panel p-5 text-center">
-          <div className="text-muted text-xs">{t("people_equiv")}</div>
-          <div className="mt-2 text-4xl">
+          <div className="text-muted text-xs">👥 {t("people_equiv")}</div>
+          <div className="mt-2 text-5xl">
             {imp && <Counter value={imp.people_equivalent} format={(n) => fmtInt(n, lang)} />}
           </div>
           <div className="text-muted mt-1 text-[11px]">{t("people")}</div>
         </div>
         <div className="panel p-5 text-center">
-          <div className="text-muted text-xs">{t("value")}</div>
-          <div className="mt-2 text-4xl text-green">
+          <div className="text-muted text-xs">🪙 {t("value")}</div>
+          <div className="mt-2 text-5xl text-green">
             {imp && <Counter value={jodMid} format={(n) => fmtInt(n, lang)} />}
           </div>
           <div className="text-muted mt-1 text-[11px]">

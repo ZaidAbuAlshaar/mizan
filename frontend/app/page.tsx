@@ -4,18 +4,14 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { api } from "@/lib/api";
 import { useI18n } from "@/lib/i18n";
-import { fmtInt, levelColor, levelDot } from "@/lib/format";
-import { levelOf } from "@/lib/types";
-import type { FeatureCollection, Meta } from "@/lib/types";
-import DemoBadge from "@/components/DemoBadge";
+import { fmtInt, levelColor, levelDot, stressLevel } from "@/lib/format";
+import type { FeatureCollection } from "@/lib/types";
+import KpiStrip from "@/components/KpiStrip";
+import Skeleton from "@/components/Skeleton";
 
 const MapView = dynamic(() => import("@/components/MapView"), {
   ssr: false,
-  loading: () => (
-    <div className="grid h-[72vh] place-items-center rounded-xl border border-line bg-panel text-muted">
-      …
-    </div>
-  ),
+  loading: () => <Skeleton className="h-[66vh] w-full" />,
 });
 
 export default function NationalMap() {
@@ -28,20 +24,14 @@ export default function NationalMap() {
     type: "FeatureCollection",
     features: [],
   });
-  const [meta, setMeta] = useState<Meta | null>(null);
-  const [offline, setOffline] = useState(false);
+  const [ready, setReady] = useState(false);
 
   useEffect(() => {
     (async () => {
-      const [f, b, m] = await Promise.all([
-        api.fields(),
-        api.basins(),
-        api.meta(),
-      ]);
+      const [f, b] = await Promise.all([api.fields(), api.basins()]);
       setFields(f.data);
       setBasins(b.data);
-      setMeta(m.data);
-      setOffline(f.offline || b.offline);
+      setReady(true);
     })();
   }, []);
 
@@ -60,32 +50,38 @@ export default function NationalMap() {
 
   return (
     <div className="space-y-3">
-      <div className="flex flex-wrap items-center justify-between gap-2">
+      <div className="flex flex-wrap items-end justify-between gap-2">
         <div>
           <h1 className="font-head text-2xl font-extrabold">{t("nav_map")}</h1>
           <p className="text-muted text-sm">{t("tagline")}</p>
         </div>
-        <DemoBadge demo={meta?.demo} offline={offline} />
+        <Link href="/queue" className="btn border-accent/50 text-accent">
+          📋 {t("view_queue")}
+        </Link>
       </div>
+
+      <KpiStrip />
 
       <div className="grid gap-3 lg:grid-cols-3">
         <div className="lg:col-span-2">
-          <MapView fields={fields} basins={basins} height="72vh" />
+          <MapView fields={fields} basins={basins} height="66vh" />
         </div>
 
         <aside className="space-y-3">
           <div className="panel p-3">
             <div className="text-muted mb-2 text-[11px]">{t("basins")}</div>
             <div className="space-y-2">
+              {!ready &&
+                [0, 1, 2].map((i) => <Skeleton key={i} className="h-[74px]" />)}
               {basins.features.map((b) => {
                 const p = b.properties as any;
-                const lv = levelOf(p.stress_pct >= 150 ? 99 : p.stress_pct >= 100 ? 50 : 10);
+                const lv = stressLevel(p.stress_pct);
                 const a = agg[p.id] || { red: 0, m3: 0 };
                 return (
                   <Link
                     key={p.id}
                     href={`/basin/${p.id}`}
-                    className="block rounded-lg border border-line bg-panel2 p-3 transition-colors hover:border-accent"
+                    className="block rounded-lg border border-line bg-panel2 p-3 transition-all hover:-translate-y-0.5 hover:border-accent"
                   >
                     <div className="flex items-center justify-between">
                       <span className="font-head font-bold">
@@ -94,6 +90,7 @@ export default function NationalMap() {
                       <span
                         className="stat text-sm"
                         style={{ color: levelColor[lv] }}
+                        title={p.stress_source}
                       >
                         {levelDot[lv]} {p.stress_pct}%
                       </span>
@@ -111,13 +108,18 @@ export default function NationalMap() {
                 );
               })}
             </div>
+            <p className="text-muted mt-2 text-[10px]">
+              {lang === "ar"
+                ? "نسب الإجهاد: MWI 2009 عبر IWMI (مُتحقَّق)"
+                : "Stress %: MWI 2009 via IWMI (verified)"}
+            </p>
           </div>
 
-          <div className="panel p-3 text-xs text-muted">
-            <span className="me-1">🔴🟠🟢</span>
+          <div className="panel p-3 text-xs leading-6 text-muted">
+            <span className="me-1">🛰</span>
             {lang === "ar"
-              ? "كل نقطة = حقل مشبوه، لونها حسب درجة الاشتباه (0–100). اضغط نقطة لفتح دليلها."
-              : "Each dot = a suspected field colored by suspicion score (0–100). Click a dot to open its evidence."}
+              ? "كل نقطة = حقل مشبوه، لونها حسب درجة الاشتباه (0–100). اضغط نقطة على الخريطة لفتح بطاقة سريعة ومنها إلى الدليل الكامل."
+              : "Each dot is a suspected field colored by suspicion score (0–100). Click a dot for a quick card, then jump to its full evidence."}
           </div>
         </aside>
       </div>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="sand2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#c8b07e"/>
+      <stop offset="55%" stop-color="#bda06c"/>
+      <stop offset="100%" stop-color="#a98f5c"/>
+    </linearGradient>
+    <radialGradient id="pivot" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3f9e46"/>
+      <stop offset="78%" stop-color="#2f7d32"/>
+      <stop offset="100%" stop-color="#235e26"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#sand2)"/>
+  <g opacity="0.18" fill="#8a744a">
+    <ellipse cx="140" cy="90" rx="90" ry="14"/>
+    <ellipse cx="430" cy="180" rx="130" ry="18"/>
+    <ellipse cx="650" cy="80" rx="80" ry="12"/>
+    <ellipse cx="240" cy="320" rx="120" ry="16"/>
+    <ellipse cx="600" cy="400" rx="150" ry="20"/>
+    <ellipse cx="90" cy="440" rx="70" ry="11"/>
+  </g>
+  <path d="M-10,260 C150,230 260,300 420,270 S700,210 810,250" fill="none"
+        stroke="#9b8254" stroke-width="16" opacity="0.45"/>
+  <path d="M120,510 C200,380 330,330 520,300 S760,260 820,240" fill="none"
+        stroke="#a08a5e" stroke-width="6" stroke-dasharray="14 10" opacity="0.7"/>
+  <!-- center-pivot circles "bloomed" by 2026 -->
+  <g stroke="#1d4d20" stroke-width="2">
+    <circle cx="170" cy="150" r="46" fill="url(#pivot)"/>
+    <circle cx="282" cy="166" r="52" fill="url(#pivot)"/>
+    <circle cx="225" cy="262" r="40" fill="url(#pivot)"/>
+    <circle cx="540" cy="120" r="58" fill="url(#pivot)"/>
+    <circle cx="660" cy="180" r="44" fill="url(#pivot)"/>
+    <circle cx="470" cy="380" r="62" fill="url(#pivot)"/>
+    <circle cx="350" cy="420" r="38" fill="url(#pivot)"/>
+    <circle cx="610" cy="330" r="34" fill="url(#pivot)"/>
+  </g>
+  <!-- pivot arms -->
+  <g stroke="#9fd9a3" stroke-width="2" opacity="0.8">
+    <line x1="170" y1="150" x2="214" y2="138"/>
+    <line x1="282" y1="166" x2="262" y2="118"/>
+    <line x1="540" y1="120" x2="586" y2="150"/>
+    <line x1="470" y1="380" x2="430" y2="334"/>
+  </g>
+  <!-- rectangular plots -->
+  <g fill="#2f7d32" opacity="0.9" stroke="#1d4d20">
+    <rect x="585" y="330" width="78" height="58" rx="3"/>
+    <rect x="96" y="330" width="64" height="44" rx="3"/>
+    <rect x="700" y="250" width="56" height="42" rx="3"/>
+  </g>
+  <text x="20" y="40" font-family="monospace" font-size="22" fill="#473a1f" opacity="0.85">AZRAQ · 2026</text>
+  <text x="780" y="478" text-anchor="end" font-family="monospace" font-size="20" fill="#473a1f" opacity="0.7">DEMO DATA — بيانات تجريبية</text>
+</svg>
