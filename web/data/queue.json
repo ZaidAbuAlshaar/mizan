@@ -1,0 +1,1122 @@
+[
+ {
+  "rank": 1,
+  "lat": 32.0363,
+  "lon": 36.5603,
+  "gps": "32.04N, 36.56E",
+  "area_ha": 40.9,
+  "first_seen": 2024,
+  "m3_low": 245400,
+  "m3_high": 368100,
+  "score": 93,
+  "score_parts": [
+   {
+    "k": "inside_closed_basin",
+    "v": 35.0,
+    "max": 35
+   },
+   {
+    "k": "new_after_closure",
+    "v": 25.0,
+    "max": 25
+   },
+   {
+    "k": "active_zero_rain",
+    "v": 15.0,
+    "max": 15
+   },
+   {
+    "k": "area_norm",
+    "v": 6.2,
+    "max": 12.5
+   },
+   {
+    "k": "expansion_norm",
+    "v": 11.4,
+    "max": 12.5
+   }
+  ],
+  "traj": [
+   {
+    "y": 2018,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2020,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2022,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2024,
+    "active_frac": 0.91
+   }
+  ]
+ },
+ {
+  "rank": 2,
+  "lat": 31.8314,
+  "lon": 36.982,
+  "gps": "31.83N, 36.98E",
+  "area_ha": 15.9,
+  "first_seen": 2024,
+  "m3_low": 95400,
+  "m3_high": 143100,
+  "score": 89,
+  "score_parts": [
+   {
+    "k": "inside_closed_basin",
+    "v": 35.0,
+    "max": 35
+   },
+   {
+    "k": "new_after_closure",
+    "v": 25.0,
+    "max": 25
+   },
+   {
+    "k": "active_zero_rain",
+    "v": 15.0,
+    "max": 15
+   },
+   {
+    "k": "area_norm",
+    "v": 2.4,
+    "max": 12.5
+   },
+   {
+    "k": "expansion_norm",
+    "v": 11.1,
+    "max": 12.5
+   }
+  ],
+  "traj": [
+   {
+    "y": 2018,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2020,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2022,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2024,
+    "active_frac": 0.89
+   }
+  ]
+ },
+ {
+  "rank": 3,
+  "lat": 31.8423,
+  "lon": 37.0134,
+  "gps": "31.84N, 37.01E",
+  "area_ha": 9.2,
+  "first_seen": 2024,
+  "m3_low": 55199,
+  "m3_high": 82800,
+  "score": 89,
+  "score_parts": [
+   {
+    "k": "inside_closed_basin",
+    "v": 35.0,
+    "max": 35
+   },
+   {
+    "k": "new_after_closure",
+    "v": 25.0,
+    "max": 25
+   },
+   {
+    "k": "active_zero_rain",
+    "v": 15.0,
+    "max": 15
+   },
+   {
+    "k": "area_norm",
+    "v": 1.4,
+    "max": 12.5
+   },
+   {
+    "k": "expansion_norm",
+    "v": 12.5,
+    "max": 12.5
+   }
+  ],
+  "traj": [
+   {
+    "y": 2018,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2020,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2022,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2024,
+    "active_frac": 1.0
+   }
+  ]
+ },
+ {
+  "rank": 4,
+  "lat": 31.8826,
+  "lon": 37.0199,
+  "gps": "31.88N, 37.02E",
+  "area_ha": 82.7,
+  "first_seen": 2020,
+  "m3_low": 496200,
+  "m3_high": 744300,
+  "score": 88,
+  "score_parts": [
+   {
+    "k": "inside_closed_basin",
+    "v": 35.0,
+    "max": 35
+   },
+   {
+    "k": "new_after_closure",
+    "v": 25.0,
+    "max": 25
+   },
+   {
+    "k": "active_zero_rain",
+    "v": 15.0,
+    "max": 15
+   },
+   {
+    "k": "area_norm",
+    "v": 12.5,
+    "max": 12.5
+   },
+   {
+    "k": "expansion_norm",
+    "v": 0.0,
+    "max": 12.5
+   }
+  ],
+  "traj": [
+   {
+    "y": 2018,
+    "active_frac": 0.25
+   },
+   {
+    "y": 2020,
+    "active_frac": 0.36
+   },
+   {
+    "y": 2022,
+    "active_frac": 0.81
+   },
+   {
+    "y": 2024,
+    "active_frac": 0.6
+   }
+  ]
+ },
+ {
+  "rank": 5,
+  "lat": 31.7911,
+  "lon": 36.9326,
+  "gps": "31.79N, 36.93E",
+  "area_ha": 2.2,
+  "first_seen": 2018,
+  "m3_low": 13200,
+  "m3_high": 19800,
+  "score": 88,
+  "score_parts": [
+   {
+    "k": "inside_closed_basin",
+    "v": 35.0,
+    "max": 35
+   },
+   {
+    "k": "new_after_closure",
+    "v": 25.0,
+    "max": 25
+   },
+   {
+    "k": "active_zero_rain",
+    "v": 15.0,
+    "max": 15
+   },
+   {
+    "k": "area_norm",
+    "v": 0.3,
+    "max": 12.5
+   },
+   {
+    "k": "expansion_norm",
+    "v": 12.5,
+    "max": 12.5
+   }
+  ],
+  "traj": [
+   {
+    "y": 2018,
+    "active_frac": 0.83
+   },
+   {
+    "y": 2020,
+    "active_frac": 0.75
+   },
+   {
+    "y": 2022,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2024,
+    "active_frac": 1.0
+   }
+  ]
+ },
+ {
+  "rank": 6,
+  "lat": 31.7853,
+  "lon": 37.0119,
+  "gps": "31.79N, 37.01E",
+  "area_ha": 42.6,
+  "first_seen": 2020,
+  "m3_low": 255600,
+  "m3_high": 383400,
+  "score": 86,
+  "score_parts": [
+   {
+    "k": "inside_closed_basin",
+    "v": 35.0,
+    "max": 35
+   },
+   {
+    "k": "new_after_closure",
+    "v": 25.0,
+    "max": 25
+   },
+   {
+    "k": "active_zero_rain",
+    "v": 15.0,
+    "max": 15
+   },
+   {
+    "k": "area_norm",
+    "v": 6.4,
+    "max": 12.5
+   },
+   {
+    "k": "expansion_norm",
+    "v": 4.2,
+    "max": 12.5
+   }
+  ],
+  "traj": [
+   {
+    "y": 2018,
+    "active_frac": 0.07
+   },
+   {
+    "y": 2020,
+    "active_frac": 0.32
+   },
+   {
+    "y": 2022,
+    "active_frac": 0.43
+   },
+   {
+    "y": 2024,
+    "active_frac": 0.77
+   }
+  ]
+ },
+ {
+  "rank": 7,
+  "lat": 32.0826,
+  "lon": 37.1009,
+  "gps": "32.08N, 37.10E",
+  "area_ha": 18.2,
+  "first_seen": 2024,
+  "m3_low": 109200,
+  "m3_high": 163800,
+  "score": 86,
+  "score_parts": [
+   {
+    "k": "inside_closed_basin",
+    "v": 35.0,
+    "max": 35
+   },
+   {
+    "k": "new_after_closure",
+    "v": 25.0,
+    "max": 25
+   },
+   {
+    "k": "active_zero_rain",
+    "v": 15.0,
+    "max": 15
+   },
+   {
+    "k": "area_norm",
+    "v": 2.8,
+    "max": 12.5
+   },
+   {
+    "k": "expansion_norm",
+    "v": 7.9,
+    "max": 12.5
+   }
+  ],
+  "traj": [
+   {
+    "y": 2018,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2020,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2022,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2024,
+    "active_frac": 0.63
+   }
+  ]
+ },
+ {
+  "rank": 8,
+  "lat": 31.7978,
+  "lon": 37.0268,
+  "gps": "31.80N, 37.03E",
+  "area_ha": 13.6,
+  "first_seen": 2024,
+  "m3_low": 81600,
+  "m3_high": 122400,
+  "score": 85,
+  "score_parts": [
+   {
+    "k": "inside_closed_basin",
+    "v": 35.0,
+    "max": 35
+   },
+   {
+    "k": "new_after_closure",
+    "v": 25.0,
+    "max": 25
+   },
+   {
+    "k": "active_zero_rain",
+    "v": 15.0,
+    "max": 15
+   },
+   {
+    "k": "area_norm",
+    "v": 2.1,
+    "max": 12.5
+   },
+   {
+    "k": "expansion_norm",
+    "v": 7.5,
+    "max": 12.5
+   }
+  ],
+  "traj": [
+   {
+    "y": 2018,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2020,
+    "active_frac": 0.2
+   },
+   {
+    "y": 2022,
+    "active_frac": 0.05
+   },
+   {
+    "y": 2024,
+    "active_frac": 0.65
+   }
+  ]
+ },
+ {
+  "rank": 9,
+  "lat": 31.8516,
+  "lon": 36.9995,
+  "gps": "31.85N, 37.00E",
+  "area_ha": 9.7,
+  "first_seen": 2024,
+  "m3_low": 58199,
+  "m3_high": 87300,
+  "score": 84,
+  "score_parts": [
+   {
+    "k": "inside_closed_basin",
+    "v": 35.0,
+    "max": 35
+   },
+   {
+    "k": "new_after_closure",
+    "v": 25.0,
+    "max": 25
+   },
+   {
+    "k": "active_zero_rain",
+    "v": 15.0,
+    "max": 15
+   },
+   {
+    "k": "area_norm",
+    "v": 1.5,
+    "max": 12.5
+   },
+   {
+    "k": "expansion_norm",
+    "v": 7.8,
+    "max": 12.5
+   }
+  ],
+  "traj": [
+   {
+    "y": 2018,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2020,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2022,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2024,
+    "active_frac": 0.62
+   }
+  ]
+ },
+ {
+  "rank": 10,
+  "lat": 31.8774,
+  "lon": 37.0258,
+  "gps": "31.88N, 37.03E",
+  "area_ha": 13.6,
+  "first_seen": 2020,
+  "m3_low": 81600,
+  "m3_high": 122400,
+  "score": 83,
+  "score_parts": [
+   {
+    "k": "inside_closed_basin",
+    "v": 35.0,
+    "max": 35
+   },
+   {
+    "k": "new_after_closure",
+    "v": 25.0,
+    "max": 25
+   },
+   {
+    "k": "active_zero_rain",
+    "v": 15.0,
+    "max": 15
+   },
+   {
+    "k": "area_norm",
+    "v": 2.1,
+    "max": 12.5
+   },
+   {
+    "k": "expansion_norm",
+    "v": 5.6,
+    "max": 12.5
+   }
+  ],
+  "traj": [
+   {
+    "y": 2018,
+    "active_frac": 0.05
+   },
+   {
+    "y": 2020,
+    "active_frac": 0.33
+   },
+   {
+    "y": 2022,
+    "active_frac": 0.5
+   },
+   {
+    "y": 2024,
+    "active_frac": 0.95
+   }
+  ]
+ },
+ {
+  "rank": 11,
+  "lat": 31.8619,
+  "lon": 36.9533,
+  "gps": "31.86N, 36.95E",
+  "area_ha": 7.1,
+  "first_seen": 2024,
+  "m3_low": 42600,
+  "m3_high": 63900,
+  "score": 83,
+  "score_parts": [
+   {
+    "k": "inside_closed_basin",
+    "v": 35.0,
+    "max": 35
+   },
+   {
+    "k": "new_after_closure",
+    "v": 25.0,
+    "max": 25
+   },
+   {
+    "k": "active_zero_rain",
+    "v": 15.0,
+    "max": 15
+   },
+   {
+    "k": "area_norm",
+    "v": 1.1,
+    "max": 12.5
+   },
+   {
+    "k": "expansion_norm",
+    "v": 6.5,
+    "max": 12.5
+   }
+  ],
+  "traj": [
+   {
+    "y": 2018,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2020,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2022,
+    "active_frac": 0.27
+   },
+   {
+    "y": 2024,
+    "active_frac": 0.79
+   }
+  ]
+ },
+ {
+  "rank": 12,
+  "lat": 31.8851,
+  "lon": 36.9253,
+  "gps": "31.89N, 36.93E",
+  "area_ha": 3.0,
+  "first_seen": 2020,
+  "m3_low": 18000,
+  "m3_high": 27000,
+  "score": 83,
+  "score_parts": [
+   {
+    "k": "inside_closed_basin",
+    "v": 35.0,
+    "max": 35
+   },
+   {
+    "k": "new_after_closure",
+    "v": 25.0,
+    "max": 25
+   },
+   {
+    "k": "active_zero_rain",
+    "v": 15.0,
+    "max": 15
+   },
+   {
+    "k": "area_norm",
+    "v": 0.5,
+    "max": 12.5
+   },
+   {
+    "k": "expansion_norm",
+    "v": 7.8,
+    "max": 12.5
+   }
+  ],
+  "traj": [
+   {
+    "y": 2018,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2020,
+    "active_frac": 0.75
+   },
+   {
+    "y": 2022,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2024,
+    "active_frac": 0.62
+   }
+  ]
+ },
+ {
+  "rank": 13,
+  "lat": 31.8606,
+  "lon": 36.9974,
+  "gps": "31.86N, 37.00E",
+  "area_ha": 1.7,
+  "first_seen": 2024,
+  "m3_low": 10200,
+  "m3_high": 15300,
+  "score": 83,
+  "score_parts": [
+   {
+    "k": "inside_closed_basin",
+    "v": 35.0,
+    "max": 35
+   },
+   {
+    "k": "new_after_closure",
+    "v": 25.0,
+    "max": 25
+   },
+   {
+    "k": "active_zero_rain",
+    "v": 15.0,
+    "max": 15
+   },
+   {
+    "k": "area_norm",
+    "v": 0.3,
+    "max": 12.5
+   },
+   {
+    "k": "expansion_norm",
+    "v": 8.0,
+    "max": 12.5
+   }
+  ],
+  "traj": [
+   {
+    "y": 2018,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2020,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2022,
+    "active_frac": 0.09
+   },
+   {
+    "y": 2024,
+    "active_frac": 0.73
+   }
+  ]
+ },
+ {
+  "rank": 14,
+  "lat": 31.8636,
+  "lon": 36.9685,
+  "gps": "31.86N, 36.97E",
+  "area_ha": 1.5,
+  "first_seen": 2024,
+  "m3_low": 9000,
+  "m3_high": 13500,
+  "score": 83,
+  "score_parts": [
+   {
+    "k": "inside_closed_basin",
+    "v": 35.0,
+    "max": 35
+   },
+   {
+    "k": "new_after_closure",
+    "v": 25.0,
+    "max": 25
+   },
+   {
+    "k": "active_zero_rain",
+    "v": 15.0,
+    "max": 15
+   },
+   {
+    "k": "area_norm",
+    "v": 0.2,
+    "max": 12.5
+   },
+   {
+    "k": "expansion_norm",
+    "v": 8.0,
+    "max": 12.5
+   }
+  ],
+  "traj": [
+   {
+    "y": 2018,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2020,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2022,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2024,
+    "active_frac": 0.64
+   }
+  ]
+ },
+ {
+  "rank": 15,
+  "lat": 31.8433,
+  "lon": 36.9943,
+  "gps": "31.84N, 36.99E",
+  "area_ha": 7.8,
+  "first_seen": 2022,
+  "m3_low": 46800,
+  "m3_high": 70200,
+  "score": 82,
+  "score_parts": [
+   {
+    "k": "inside_closed_basin",
+    "v": 35.0,
+    "max": 35
+   },
+   {
+    "k": "new_after_closure",
+    "v": 25.0,
+    "max": 25
+   },
+   {
+    "k": "active_zero_rain",
+    "v": 15.0,
+    "max": 15
+   },
+   {
+    "k": "area_norm",
+    "v": 1.2,
+    "max": 12.5
+   },
+   {
+    "k": "expansion_norm",
+    "v": 5.5,
+    "max": 12.5
+   }
+  ],
+  "traj": [
+   {
+    "y": 2018,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2020,
+    "active_frac": 0.15
+   },
+   {
+    "y": 2022,
+    "active_frac": 0.56
+   },
+   {
+    "y": 2024,
+    "active_frac": 1.0
+   }
+  ]
+ },
+ {
+  "rank": 16,
+  "lat": 31.8884,
+  "lon": 36.8894,
+  "gps": "31.89N, 36.89E",
+  "area_ha": 1.4,
+  "first_seen": 2024,
+  "m3_low": 8400,
+  "m3_high": 12600,
+  "score": 82,
+  "score_parts": [
+   {
+    "k": "inside_closed_basin",
+    "v": 35.0,
+    "max": 35
+   },
+   {
+    "k": "new_after_closure",
+    "v": 25.0,
+    "max": 25
+   },
+   {
+    "k": "active_zero_rain",
+    "v": 15.0,
+    "max": 15
+   },
+   {
+    "k": "area_norm",
+    "v": 0.2,
+    "max": 12.5
+   },
+   {
+    "k": "expansion_norm",
+    "v": 7.1,
+    "max": 12.5
+   }
+  ],
+  "traj": [
+   {
+    "y": 2018,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2020,
+    "active_frac": 0.14
+   },
+   {
+    "y": 2022,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2024,
+    "active_frac": 0.57
+   }
+  ]
+ },
+ {
+  "rank": 17,
+  "lat": 31.8723,
+  "lon": 37.0064,
+  "gps": "31.87N, 37.01E",
+  "area_ha": 4.5,
+  "first_seen": 2024,
+  "m3_low": 27000,
+  "m3_high": 40500,
+  "score": 81,
+  "score_parts": [
+   {
+    "k": "inside_closed_basin",
+    "v": 35.0,
+    "max": 35
+   },
+   {
+    "k": "new_after_closure",
+    "v": 25.0,
+    "max": 25
+   },
+   {
+    "k": "active_zero_rain",
+    "v": 15.0,
+    "max": 15
+   },
+   {
+    "k": "area_norm",
+    "v": 0.7,
+    "max": 12.5
+   },
+   {
+    "k": "expansion_norm",
+    "v": 5.2,
+    "max": 12.5
+   }
+  ],
+  "traj": [
+   {
+    "y": 2018,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2020,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2022,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2024,
+    "active_frac": 0.42
+   }
+  ]
+ },
+ {
+  "rank": 18,
+  "lat": 31.8114,
+  "lon": 37.0939,
+  "gps": "31.81N, 37.09E",
+  "area_ha": 2.2,
+  "first_seen": 2024,
+  "m3_low": 13200,
+  "m3_high": 19800,
+  "score": 81,
+  "score_parts": [
+   {
+    "k": "inside_closed_basin",
+    "v": 35.0,
+    "max": 35
+   },
+   {
+    "k": "new_after_closure",
+    "v": 25.0,
+    "max": 25
+   },
+   {
+    "k": "active_zero_rain",
+    "v": 15.0,
+    "max": 15
+   },
+   {
+    "k": "area_norm",
+    "v": 0.3,
+    "max": 12.5
+   },
+   {
+    "k": "expansion_norm",
+    "v": 5.2,
+    "max": 12.5
+   }
+  ],
+  "traj": [
+   {
+    "y": 2018,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2020,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2022,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2024,
+    "active_frac": 0.42
+   }
+  ]
+ },
+ {
+  "rank": 19,
+  "lat": 31.7814,
+  "lon": 37.0248,
+  "gps": "31.78N, 37.02E",
+  "area_ha": 1.6,
+  "first_seen": 2022,
+  "m3_low": 9600,
+  "m3_high": 14400,
+  "score": 81,
+  "score_parts": [
+   {
+    "k": "inside_closed_basin",
+    "v": 35.0,
+    "max": 35
+   },
+   {
+    "k": "new_after_closure",
+    "v": 25.0,
+    "max": 25
+   },
+   {
+    "k": "active_zero_rain",
+    "v": 15.0,
+    "max": 15
+   },
+   {
+    "k": "area_norm",
+    "v": 0.2,
+    "max": 12.5
+   },
+   {
+    "k": "expansion_norm",
+    "v": 5.4,
+    "max": 12.5
+   }
+  ],
+  "traj": [
+   {
+    "y": 2018,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2020,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2022,
+    "active_frac": 0.43
+   },
+   {
+    "y": 2024,
+    "active_frac": 0.86
+   }
+  ]
+ },
+ {
+  "rank": 20,
+  "lat": 31.879,
+  "lon": 37.0007,
+  "gps": "31.88N, 37.00E",
+  "area_ha": 1.2,
+  "first_seen": 2024,
+  "m3_low": 7200,
+  "m3_high": 10800,
+  "score": 81,
+  "score_parts": [
+   {
+    "k": "inside_closed_basin",
+    "v": 35.0,
+    "max": 35
+   },
+   {
+    "k": "new_after_closure",
+    "v": 25.0,
+    "max": 25
+   },
+   {
+    "k": "active_zero_rain",
+    "v": 15.0,
+    "max": 15
+   },
+   {
+    "k": "area_norm",
+    "v": 0.2,
+    "max": 12.5
+   },
+   {
+    "k": "expansion_norm",
+    "v": 5.4,
+    "max": 12.5
+   }
+  ],
+  "traj": [
+   {
+    "y": 2018,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2020,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2022,
+    "active_frac": 0.0
+   },
+   {
+    "y": 2024,
+    "active_frac": 0.43
+   }
+  ]
+ }
+]

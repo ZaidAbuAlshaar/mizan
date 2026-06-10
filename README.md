@@ -16,6 +16,9 @@
 | [`readiness-report.md`](readiness-report.md) | **تقرير الجاهزية التنفيذية** — تدقيق 6 فحوص (EXECUTABLE: YES)؛ العوائق المتبقية بشرية فقط |
 | [`design-brief.md`](design-brief.md) | **برومت Claude Design** — قائم بذاته، 5 شاشات + القيود الخمسة الحاكمة |
 | [`implementation-kickoff.md`](implementation-kickoff.md) | **بروتوكول جولة الديزاين ⇄ التنفيذ** — قائمة عودة الديزاين + أمر بدء التنفيذ |
+| [`web/`](web/) | **الداشبورد الحي (المنتج)** — بيانات حقيقية: 149 حقلاً مكتشفاً من Sentinel-2، طبقات NASA GIBS حية، آلة زمن HLS، أمطار POWER. تشغيل: `python -m http.server 8137 --directory web` |
+| [`pipeline/`](pipeline/) | **Engine 1+2 الحقيقي بلا GEE** — Sentinel-2 (Earth Search STAC) → NDVI → مضلعات + درجات + first_seen؛ POWER + GRACE/GIBS. تشغيل: `python pipeline/mizan_pipeline.py` |
+| [`design/approved/`](design/approved/) | الديزاين المعتمد (MIZAN-V1) كما وصل من Claude Design |
 | [`CLAUDE.md`](CLAUDE.md) | **قواعد الجلسة لـ Claude Code** — يُقرأ تلقائياً كل جلسة: القواعد الذهبية وخريطة الملفات بدل لصق الوثائق |
 | [`docs/ميزان_MIZAN_v3_COMPLETE.md`](docs/ميزان_MIZAN_v3_COMPLETE.md) | **الدستور المعتمد (v3)** — المواصفة الكاملة (ماذا ولماذا): القصة، العلم، architecture، pipeline P1–P7، الشاشات، **§20 خارطة التطوير**. **مصدر الحقيقة الوحيد لكل رقم (§4)** · إحالات `plan.md` تتبع ترقيم v3 |
 | [`docs/ميزان_MIZAN_FINAL_v2.md`](docs/ميزان_MIZAN_FINAL_v2.md) | **v2 — مؤرشف** (v3 يدمجه ويزيد عليه؛ للرجوع فقط) |

@@ -1,0 +1,103 @@
+{
+ "run_utc": "2026-06-10T04:54:58.109521Z",
+ "aoi_bbox": [
+  36.55,
+  31.7,
+  37.15,
+  32.1
+ ],
+ "ndvi_threshold": 0.35,
+ "min_area_ha": 1.0,
+ "detect_res_deg": 0.0002,
+ "year": 2025,
+ "history_years": [
+  2018,
+  2020,
+  2022,
+  2024
+ ],
+ "n_fields": 149,
+ "total_area_ha": 985.0,
+ "est_m3_low": 5910000,
+ "est_m3_high": 8865000,
+ "summer_rain_mm": 0,
+ "scenes": [
+  {
+   "id": "S2C_37SCR_20250824_0_L2A",
+   "date": "2025-08-24",
+   "cloud": 0,
+   "tile": "MGRS-37SCR"
+  },
+  {
+   "id": "S2B_37SBR_20250812_0_L2A",
+   "date": "2025-08-12",
+   "cloud": 0,
+   "tile": "MGRS-37SBR"
+  }
+ ],
+ "history_scenes": {
+  "2018": [
+   {
+    "id": "S2B_37SCR_20180826_1_L2A",
+    "date": "2018-08-26",
+    "cloud": 0,
+    "tile": "MGRS-37SCR"
+   },
+   {
+    "id": "S2B_37SBR_20180819_1_L2A",
+    "date": "2018-08-19",
+    "cloud": 0,
+    "tile": "MGRS-37SBR"
+   }
+  ],
+  "2020": [
+   {
+    "id": "S2A_37SBR_20200813_1_L2A",
+    "date": "2020-08-13",
+    "cloud": 0.0,
+    "tile": "MGRS-37SBR"
+   },
+   {
+    "id": "S2B_37SCR_20200616_1_L2A",
+    "date": "2020-06-16",
+    "cloud": 0.0,
+    "tile": "MGRS-37SCR"
+   }
+  ],
+  "2022": [
+   {
+    "id": "S2B_37SBR_20220818_0_L2A",
+    "date": "2022-08-18",
+    "cloud": 0,
+    "tile": "MGRS-37SBR"
+   },
+   {
+    "id": "S2A_37SCR_20220830_0_L2A",
+    "date": "2022-08-30",
+    "cloud": 0,
+    "tile": "MGRS-37SCR"
+   }
+  ],
+  "2024": [
+   {
+    "id": "S2A_37SBR_20240822_0_L2A",
+    "date": "2024-08-22",
+    "cloud": 0,
+    "tile": "MGRS-37SBR"
+   },
+   {
+    "id": "S2B_37SCR_20240824_0_L2A",
+    "date": "2024-08-24",
+    "cloud": 0,
+    "tile": "MGRS-37SCR"
+   }
+  ]
+ },
+ "sources": {
+  "sentinel2": "Sentinel-2 L2A COGs - Earth Search STAC (AWS Open Data, ESA/Copernicus)",
+  "rain": "NASA POWER API",
+  "grace_vis": "NASA GIBS GRACE_Tellus LWE Mascon CRI"
+ },
+ "positioning": "All detections are CANDIDATES FOR INSPECTION only - human-in-the-loop.",
+ "method_volume": "Method A: area_ha x 6000-9000 m3/ha/yr (declared assumption, plan P5)"
+}

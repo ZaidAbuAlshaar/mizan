@@ -1,0 +1,108 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.817,
+     31.945
+    ]
+   },
+   "properties": {
+    "name_ar": "وادي السير",
+    "name_en": "Wadi As-Seer",
+    "date": "2025-08",
+    "note_ar": "بئر 15م، مضختان، >500 م³/يوم (بيان MWI)",
+    "approx": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.662,
+     31.905
+    ]
+   },
+   "properties": {
+    "name_ar": "الكفرين/سويمة",
+    "name_en": "Kafrein/Sweimeh",
+    "date": "2025-11",
+    "note_ar": "8 آبار 5,000 م³/ساعة + 3.8كم كهرباء",
+    "approx": true,
+    "outside_logic_ar": "غور مروي سطحياً — خارج منطق الصحراء"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.662,
+     31.905
+    ]
+   },
+   "properties": {
+    "name_ar": "الكفرين",
+    "name_en": "Kafrein",
+    "date": "2025-05",
+    "note_ar": "17 بئراً بحملة واحدة",
+    "approx": true,
+    "outside_logic_ar": "غور مروي سطحياً — خارج منطق الصحراء"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     36.09,
+     31.483
+    ]
+   },
+   "properties": {
+    "name_ar": "خان الزبيب",
+    "name_en": "Khan Az-Zabib",
+    "date": "2025-08",
+    "approx": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     36.22,
+     30.3
+    ]
+   },
+   "properties": {
+    "name_ar": "الجفر",
+    "name_en": "Al-Jafr",
+    "date": "2025",
+    "note_ar": "بئر بعمق 300م",
+    "approx": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     36.09,
+     32.06
+    ]
+   },
+   "properties": {
+    "name_ar": "الزرقاء",
+    "name_en": "Zarqa",
+    "date": "2026-02",
+    "note_ar": "اعتداءات خطوط",
+    "approx": true
+   }
+  }
+ ]
+}
