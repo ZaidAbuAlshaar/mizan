@@ -1,30 +1,30 @@
 import type { Config } from "tailwindcss";
 
-// MIZAN design system — Linear/Vercel/Stripe restraint.
-// Solid near-black surfaces, one cyan→violet accent, gradients used sparingly.
+// MIZAN design system — "Royal Indigo": deep indigo-black surfaces, an
+// indigo→blue accent used sparingly, institutional / enterprise restraint.
 const config: Config = {
   content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        bg: "#050505",
-        bg2: "#0F1115",
-        surface: "#171A21",
-        panel: "#171A21",
-        panel2: "#1C2029",
-        line: "#232834",
-        line2: "#2C3340",
-        ink: "#F5F7FA",
-        muted: "#A3AAB8",
-        faint: "#6B7280",
-        accent: "#00D9FF",
-        violet: "#8B5CF6",
-        accent2: "#8B5CF6",
-        mint: "#00FFB2",
-        red: "#FF5A5A",
-        amber: "#FFB547",
-        green: "#00FFB2",
-        info: "#00D9FF",
+        bg: "#060814",
+        bg2: "#0C1024",
+        surface: "#12152A",
+        panel: "#12152A",
+        panel2: "#161B33",
+        line: "#232A45",
+        line2: "#2F3860",
+        ink: "#EEF2FF",
+        muted: "#A5ADCB",
+        faint: "#6B7392",
+        accent: "#6366F1",
+        violet: "#3B82F6",
+        accent2: "#3B82F6",
+        mint: "#818CF8",
+        red: "#F87171",
+        amber: "#FBBF24",
+        green: "#34D399",
+        info: "#6366F1",
       },
       fontFamily: {
         head: ["var(--font-inter)", "var(--font-almarai)", "system-ui", "sans-serif"],

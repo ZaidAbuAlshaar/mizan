@@ -11,9 +11,8 @@ body {
 }
 body {
   @apply bg-bg text-ink font-body antialiased;
-  /* one barely-there top glow + faint grain — never a full gradient bg */
   background-image:
-    radial-gradient(1100px 460px at 50% -260px, rgba(0, 217, 255, 0.05), transparent 70%),
+    radial-gradient(1100px 460px at 50% -260px, rgba(99, 102, 241, 0.06), transparent 70%),
     radial-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px);
   background-size: 100% 100%, 28px 28px;
   background-attachment: fixed;
@@ -21,7 +20,7 @@ body {
 
 @layer base {
   ::selection {
-    background: rgba(0, 217, 255, 0.25);
+    background: rgba(99, 102, 241, 0.3);
   }
   h1,
   h2,
@@ -40,7 +39,6 @@ body {
 }
 
 @layer components {
-  /* elevated surface — solid, subtle border + shadow (no cheap glass) */
   .panel {
     @apply rounded-2xl border border-line bg-surface shadow-e2;
   }
@@ -51,7 +49,6 @@ body {
     @apply -translate-y-0.5 border-line2 shadow-e3;
   }
 
-  /* buttons */
   .btn {
     @apply inline-flex select-none items-center justify-center gap-1.5 rounded-xl
       border border-line bg-bg2 px-3.5 py-2 text-sm font-medium text-muted
@@ -60,11 +57,11 @@ body {
       focus-visible:outline-accent;
   }
   .btn-primary {
-    @apply border-0 bg-accent font-semibold text-bg hover:text-bg;
-    box-shadow: 0 0 0 1px rgba(0, 217, 255, 0.4), 0 10px 30px -10px rgba(0, 217, 255, 0.45);
+    @apply border-0 bg-accent font-semibold text-ink hover:text-ink;
+    box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.4), 0 10px 30px -10px rgba(99, 102, 241, 0.5);
   }
   .btn-primary:hover {
-    box-shadow: 0 0 0 1px rgba(0, 217, 255, 0.6), 0 14px 36px -10px rgba(0, 217, 255, 0.6);
+    box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.6), 0 14px 36px -10px rgba(99, 102, 241, 0.65);
   }
   .btn-ghost {
     @apply border-0 bg-transparent text-muted hover:bg-bg2 hover:text-accent;
@@ -81,15 +78,14 @@ body {
     @apply text-[11px] font-medium uppercase tracking-[0.16em] text-faint;
   }
 
-  /* gradient — sparingly: hero numbers / premium moments only */
   .grad-text {
-    background: linear-gradient(135deg, #00d9ff 0%, #8b5cf6 100%);
+    background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
   .grad-premium {
-    background: linear-gradient(135deg, #00ffb2 0%, #00d9ff 50%, #8b5cf6 100%);
+    background: linear-gradient(135deg, #818cf8 0%, #6366f1 50%, #3b82f6 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -112,7 +108,6 @@ body {
   }
 }
 
-/* scroll-reveal (Linear-style fade-up) */
 .reveal {
   opacity: 0;
   transform: translateY(14px);
@@ -138,86 +133,85 @@ body {
   }
 }
 
-/* scrollbar */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #232834 transparent;
+  scrollbar-color: #232a45 transparent;
 }
 *::-webkit-scrollbar {
   width: 9px;
   height: 9px;
 }
 *::-webkit-scrollbar-thumb {
-  background: #232834;
+  background: #232a45;
   border-radius: 9px;
   border: 2px solid transparent;
   background-clip: content-box;
 }
 *::-webkit-scrollbar-thumb:hover {
-  background: #2c3340;
+  background: #2f3860;
   background-clip: content-box;
 }
 
 /* MapLibre dark tweaks */
 .maplibregl-popup-content {
-  background: #171a21;
-  color: #f5f7fa;
-  border: 1px solid #232834;
+  background: #12152a;
+  color: #eef2ff;
+  border: 1px solid #232a45;
   border-radius: 14px;
   font-family: var(--font-inter), var(--font-tajawal), system-ui, sans-serif;
   padding: 12px 14px;
   box-shadow: 0 24px 60px -24px rgba(0, 0, 0, 0.9);
 }
 .maplibregl-popup-close-button {
-  color: #6b7280;
+  color: #6b7392;
   font-size: 16px;
   padding: 2px 7px;
 }
 .maplibregl-popup-tip {
-  border-top-color: #171a21 !important;
-  border-bottom-color: #171a21 !important;
+  border-top-color: #12152a !important;
+  border-bottom-color: #12152a !important;
 }
 .maplibregl-ctrl-attrib {
   font-size: 9px;
   opacity: 0.4;
 }
 .maplibregl-ctrl-attrib a {
-  color: #6b7280;
+  color: #6b7392;
 }
 .maplibregl-ctrl-group {
-  background: #171a21 !important;
-  border: 1px solid #232834 !important;
+  background: #12152a !important;
+  border: 1px solid #232a45 !important;
 }
 .maplibregl-ctrl-group button + button {
-  border-top-color: #232834 !important;
+  border-top-color: #232a45 !important;
 }
 .maplibregl-ctrl button .maplibregl-ctrl-icon {
   filter: invert(0.82);
 }
 .maplibregl-ctrl-scale {
-  background: rgba(23, 26, 33, 0.7);
-  border-color: #232834;
-  color: #a3aab8;
+  background: rgba(18, 21, 42, 0.7);
+  border-color: #232a45;
+  color: #a5adcb;
 }
 
 /* range slider */
 input[type="range"] {
   @apply h-1 cursor-pointer appearance-none rounded-full;
-  background: #232834;
+  background: #232a45;
 }
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   height: 16px;
   width: 16px;
   border-radius: 9999px;
-  background: #00d9ff;
-  border: 3px solid #050505;
-  box-shadow: 0 0 0 1px #00d9ff, 0 0 12px -2px rgba(0, 217, 255, 0.7);
+  background: #6366f1;
+  border: 3px solid #060814;
+  box-shadow: 0 0 0 1px #6366f1, 0 0 12px -2px rgba(99, 102, 241, 0.75);
 }
 input[type="range"]::-moz-range-thumb {
   height: 16px;
   width: 16px;
   border-radius: 9999px;
-  background: #00d9ff;
-  border: 3px solid #050505;
+  background: #6366f1;
+  border: 3px solid #060814;
 }

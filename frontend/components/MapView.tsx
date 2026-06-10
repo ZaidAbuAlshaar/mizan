@@ -26,13 +26,13 @@ const STYLE: any = {
     },
   },
   layers: [
-    { id: "bg", type: "background", paint: { "background-color": "#050505" } },
+    { id: "bg", type: "background", paint: { "background-color": "#060814" } },
     { id: "carto", type: "raster", source: "carto", paint: { "raster-opacity": 0.88 } },
   ],
 };
 
-const SCORE_COLOR: any = ["step", ["get", "score"], "#00FFB2", 40, "#FFB547", 70, "#FF5A5A"];
-const BASIN_COLOR: any = ["step", ["get", "stress_pct"], "#00FFB2", 100, "#FFB547", 150, "#FF5A5A"];
+const SCORE_COLOR: any = ["step", ["get", "score"], "#34D399", 40, "#FBBF24", 70, "#F87171"];
+const BASIN_COLOR: any = ["step", ["get", "stress_pct"], "#34D399", 100, "#FBBF24", 150, "#F87171"];
 
 function centroid(geom: any): [number, number] {
   if (geom.type === "Point") return geom.coordinates;
@@ -130,14 +130,14 @@ export default function MapView({
       });
       m.addLayer({
         id: "basin-line", type: "line", source: "basins",
-        paint: { "line-color": "#00D9FF", "line-width": 1, "line-opacity": 0.4 },
+        paint: { "line-color": "#6366F1", "line-width": 1, "line-opacity": 0.4 },
       });
       m.addSource("fields", { type: "geojson", data: points(fieldsRef.current) as any });
       // pulsing alert ring under the dots (red ≥70)
       m.addLayer({
         id: "field-pulse", type: "circle", source: "fields",
         filter: [">=", ["get", "score"], 70],
-        paint: { "circle-color": "#FF5A5A", "circle-opacity": 0, "circle-radius": 6 },
+        paint: { "circle-color": "#F87171", "circle-opacity": 0, "circle-radius": 6 },
       });
       m.addLayer({
         id: "field-glow", type: "circle", source: "fields",
@@ -151,7 +151,7 @@ export default function MapView({
         paint: {
           "circle-radius": ["interpolate", ["linear"], ["zoom"], 5, 3.2, 11, 8],
           "circle-color": SCORE_COLOR,
-          "circle-stroke-color": "#050505", "circle-stroke-width": 1.2, "circle-opacity": 0.96,
+          "circle-stroke-color": "#060814", "circle-stroke-width": 1.2, "circle-opacity": 0.96,
         },
       });
       loaded.current = true;
@@ -172,7 +172,7 @@ export default function MapView({
         if (!pr) return;
         const ar = langRef.current === "ar";
         const coords = (e.features![0].geometry as any).coordinates.slice();
-        const col = pr.score >= 70 ? "#FF5A5A" : pr.score >= 40 ? "#FFB547" : "#00FFB2";
+        const col = pr.score >= 70 ? "#F87171" : pr.score >= 40 ? "#FBBF24" : "#34D399";
         new maplibregl.Popup({ offset: 12, closeButton: true })
           .setLngLat(coords)
           .setHTML(
@@ -181,11 +181,11 @@ export default function MapView({
                  <b style="font-size:13px">${pr.id}</b>
                  <span style="background:${col}22;color:${col};border-radius:6px;padding:1px 7px;font-weight:700">${Math.round(pr.score)}</span>
                </div>
-               <div style="color:#A3AAB8;font-size:11px">
+               <div style="color:#A5ADCB;font-size:11px">
                  ${ar ? "المساحة" : "Area"}: ${pr.area_ha} ha · ${ar ? "أول ظهور" : "First seen"}: ${pr.first_seen_year}
                </div>
                <a href="/field/${encodeURIComponent(pr.id)}"
-                  style="color:#00D9FF;font-size:12px;text-decoration:none;border:1px solid #232834;border-radius:8px;padding:4px 8px;text-align:center">
+                  style="color:#6366F1;font-size:12px;text-decoration:none;border:1px solid #232A45;border-radius:8px;padding:4px 8px;text-align:center">
                  ${ar ? "افتح الدليل ←" : "Open evidence →"}
                </a>
              </div>`
