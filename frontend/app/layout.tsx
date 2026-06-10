@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Almarai, Tajawal } from "next/font/google";
+import { Almarai, Tajawal, Inter } from "next/font/google";
 import { I18nProvider } from "@/lib/i18n";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
@@ -17,6 +17,12 @@ const tajawal = Tajawal({
   variable: "--font-tajawal",
   display: "swap",
 });
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "ميزان MIZAN — نوزِن مياه الأردن من الفضاء",
@@ -30,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ar" dir="rtl" className={`${almarai.variable} ${tajawal.variable}`}>
+    <html lang="ar" dir="rtl" className={`${inter.variable} ${almarai.variable} ${tajawal.variable}`}>
       <body>
         <I18nProvider>
           <Nav />

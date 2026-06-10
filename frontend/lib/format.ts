@@ -16,9 +16,9 @@ export function fmtM3(n: number, lang: "ar" | "en" = "en"): string {
 }
 
 export const levelColor: Record<string, string> = {
-  red: "#ef4444",
-  amber: "#f59e0b",
-  green: "#22c55e",
+  red: "#FF5A5A",
+  amber: "#FFB547",
+  green: "#00FFB2",
 };
 
 export const levelDot: Record<string, string> = {

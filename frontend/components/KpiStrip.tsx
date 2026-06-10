@@ -30,29 +30,25 @@ export default function KpiStrip() {
     icon: string;
     node: ReactNode;
     tone: string;
-    glow: string;
     hero?: boolean;
   }[] = [
     {
       label: t("kpi_red"),
-      icon: "🚩",
+      icon: "▲",
       tone: "text-red",
-      glow: "rgba(244,63,94,0.35)",
       node: imp ? <Counter value={imp.red_fields} format={(n) => String(Math.round(n))} /> : null,
     },
     {
       label: t("kpi_m3"),
-      icon: "💧",
-      tone: "hero-num",
-      glow: "rgba(45,212,191,0.4)",
+      icon: "◇",
+      tone: "grad-text",
       hero: true,
       node: imp ? <Counter value={imp.recoverable_m3yr} format={(n) => fmtM3(n, lang)} /> : null,
     },
     {
       label: t("kpi_val"),
-      icon: "🎯",
-      tone: "text-green",
-      glow: "rgba(34,197,94,0.3)",
+      icon: "◎",
+      tone: "text-mint",
       node: val ? (
         <span className="stat">
           {val.sites_covered}
@@ -62,31 +58,23 @@ export default function KpiStrip() {
     },
     {
       label: t("kpi_crit"),
-      icon: "⏱",
+      icon: "◷",
       tone: "text-amber",
-      glow: "rgba(245,158,11,0.3)",
       node: crit ? <span className="stat ltr inline-block">{crit}</span> : null,
     },
   ];
 
   return (
-    <div className="grid grid-cols-2 gap-2.5 lg:grid-cols-4">
+    <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
       {cards.map((c) => (
-        <div
-          key={c.label}
-          className="panel panel-hover relative overflow-hidden px-4 py-3.5"
-        >
-          <div
-            className="pointer-events-none absolute -end-6 -top-8 h-20 w-20 rounded-full blur-2xl"
-            style={{ background: c.glow }}
-          />
+        <div key={c.label} className="panel panel-hover px-4 py-4">
           <div className="flex items-center gap-2">
-            <span className="grid h-7 w-7 place-items-center rounded-lg border border-white/[0.06] bg-white/[0.03] text-sm">
+            <span className="grid h-7 w-7 place-items-center rounded-lg border border-line bg-bg2 text-xs text-muted">
               {c.icon}
             </span>
             <span className="label">{c.label}</span>
           </div>
-          <div className={`mt-1.5 ${c.hero ? "text-3xl" : "text-2xl"} ${c.tone}`}>
+          <div className={`mt-2 ${c.hero ? "text-[2rem] leading-none" : "text-2xl"} ${c.tone}`}>
             {c.node ?? <Skeleton className="h-7 w-20" />}
           </div>
         </div>

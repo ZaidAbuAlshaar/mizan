@@ -1,57 +1,55 @@
 import type { Config } from "tailwindcss";
 
-// MIZAN design system — "orbital control room": deep space navy, glass
-// surfaces, a teal→sky signal accent, and the unified P4 status colors.
+// MIZAN design system — Linear/Vercel/Stripe restraint.
+// Solid near-black surfaces, one cyan→violet accent, gradients used sparingly.
 const config: Config = {
   content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        bg: "#060912",
-        bg2: "#0a0f1e",
-        panel: "#0d1424",
-        panel2: "#131d33",
-        line: "#1d2942",
-        ink: "#eef3ff",
-        muted: "#8a9cc2",
-        faint: "#56648a",
-        accent: "#2dd4bf",
-        accent2: "#38bdf8",
-        red: "#f43f5e",
-        amber: "#f59e0b",
-        green: "#22c55e",
+        bg: "#050505",
+        bg2: "#0F1115",
+        surface: "#171A21",
+        panel: "#171A21",
+        panel2: "#1C2029",
+        line: "#232834",
+        line2: "#2C3340",
+        ink: "#F5F7FA",
+        muted: "#A3AAB8",
+        faint: "#6B7280",
+        accent: "#00D9FF",
+        violet: "#8B5CF6",
+        accent2: "#8B5CF6",
+        mint: "#00FFB2",
+        red: "#FF5A5A",
+        amber: "#FFB547",
+        green: "#00FFB2",
+        info: "#00D9FF",
       },
       fontFamily: {
-        head: ["var(--font-almarai)", "system-ui", "sans-serif"],
-        body: ["var(--font-tajawal)", "system-ui", "sans-serif"],
+        head: ["var(--font-inter)", "var(--font-almarai)", "system-ui", "sans-serif"],
+        body: ["var(--font-inter)", "var(--font-tajawal)", "system-ui", "sans-serif"],
       },
+      letterSpacing: { tightest: "-0.03em" },
       boxShadow: {
-        glass:
-          "inset 0 1px 0 0 rgba(255,255,255,0.05), 0 18px 50px -28px rgba(0,0,0,0.9)",
-        glow: "0 0 0 1px rgba(45,212,191,0.25), 0 8px 30px -8px rgba(45,212,191,0.35)",
+        e1: "0 1px 0 0 rgba(255,255,255,0.03) inset, 0 1px 2px 0 rgba(0,0,0,0.6)",
+        e2: "0 1px 0 0 rgba(255,255,255,0.03) inset, 0 12px 32px -20px rgba(0,0,0,0.85)",
+        e3: "0 1px 0 0 rgba(255,255,255,0.04) inset, 0 24px 60px -28px rgba(0,0,0,0.9)",
       },
-      borderRadius: { xl: "0.9rem", "2xl": "1.15rem" },
       keyframes: {
         fadeUp: {
-          "0%": { opacity: "0", transform: "translateY(16px)" },
+          "0%": { opacity: "0", transform: "translateY(14px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
-        shimmer: {
-          "100%": { transform: "translateX(100%)" },
-        },
-        floaty: {
-          "0%,100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-5px)" },
-        },
-        glowpulse: {
-          "0%,100%": { opacity: "0.55" },
-          "50%": { opacity: "1" },
+        shimmer: { "100%": { transform: "translateX(100%)" } },
+        pulseDot: {
+          "0%,100%": { opacity: "0.5", transform: "scale(1)" },
+          "50%": { opacity: "1", transform: "scale(1.25)" },
         },
       },
       animation: {
-        fadeUp: "fadeUp 0.6s cubic-bezier(0.22,0.61,0.36,1) both",
-        floaty: "floaty 6s ease-in-out infinite",
-        glowpulse: "glowpulse 2.4s ease-in-out infinite",
+        fadeUp: "fadeUp 0.45s cubic-bezier(0.22,0.61,0.36,1) both",
+        pulseDot: "pulseDot 2s ease-in-out infinite",
       },
     },
   },

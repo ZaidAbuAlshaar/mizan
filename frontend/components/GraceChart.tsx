@@ -24,8 +24,8 @@ function PulseDot({ cx, cy }: any) {
   if (cx == null || cy == null) return null;
   return (
     <g>
-      <circle cx={cx} cy={cy} r={7} fill="#ef4444" opacity={0.5} className="gc-pulse" />
-      <circle cx={cx} cy={cy} r={5} fill="#ef4444" stroke="#0a0f1e" strokeWidth={2} />
+      <circle cx={cx} cy={cy} r={7} fill="#FF5A5A" opacity={0.5} className="gc-pulse" />
+      <circle cx={cx} cy={cy} r={5} fill="#FF5A5A" stroke="#050505" strokeWidth={2} />
     </g>
   );
 }
@@ -57,51 +57,51 @@ export default function GraceChart({ data }: { data: Forecast }) {
     <div className="ltr">
       <ResponsiveContainer width="100%" height={280}>
         <ComposedChart data={merged} margin={{ top: 8, right: 10, left: -14, bottom: 0 }}>
-          <CartesianGrid stroke="#243152" strokeDasharray="2 4" />
+          <CartesianGrid stroke="#232834" strokeDasharray="2 4" />
           <XAxis
             dataKey="month"
-            tick={{ fill: "#94a4c6", fontSize: 9 }}
+            tick={{ fill: "#A3AAB8", fontSize: 9 }}
             interval={29}
             tickLine={false}
           />
           <YAxis
-            tick={{ fill: "#94a4c6", fontSize: 9 }}
+            tick={{ fill: "#A3AAB8", fontSize: 9 }}
             tickLine={false}
             label={{
               value: "cm",
               angle: -90,
               position: "insideLeft",
-              fill: "#94a4c6",
+              fill: "#A3AAB8",
               fontSize: 10,
             }}
           />
           <Tooltip
             contentStyle={{
-              background: "#16213b",
-              border: "1px solid #243152",
+              background: "#171A21",
+              border: "1px solid #232834",
               borderRadius: 8,
               fontSize: 12,
             }}
-            labelStyle={{ color: "#94a4c6" }}
+            labelStyle={{ color: "#A3AAB8" }}
           />
           {thr != null && (
             <ReferenceLine
               y={thr}
-              stroke="#ef4444"
+              stroke="#FF5A5A"
               strokeDasharray="6 4"
               strokeOpacity={0.6}
               label={{
                 value: `${t("threshold")} ${thr}cm`,
-                fill: "#ef4444",
+                fill: "#FF5A5A",
                 fontSize: 10,
                 position: "insideBottomLeft",
               }}
             />
           )}
-          <Area dataKey="band" stroke="none" fill="#22d3ee" fillOpacity={0.12} connectNulls />
+          <Area dataKey="band" stroke="none" fill="#00D9FF" fillOpacity={0.12} connectNulls />
           <Line
             dataKey="obs"
-            stroke="#22d3ee"
+            stroke="#00D9FF"
             strokeWidth={2}
             dot={false}
             connectNulls={false}
@@ -109,7 +109,7 @@ export default function GraceChart({ data }: { data: Forecast }) {
           />
           <Line
             dataKey="yhat"
-            stroke="#f59e0b"
+            stroke="#FFB547"
             strokeWidth={2}
             strokeDasharray="5 4"
             dot={false}

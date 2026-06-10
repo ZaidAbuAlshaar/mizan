@@ -35,10 +35,10 @@ export default function Nav() {
   return (
     <>
       {/* top bar */}
-      <header className="sticky top-0 z-40 border-b border-white/[0.06] bg-bg/70 backdrop-blur-xl">
+      <header className="sticky top-0 z-40 border-b border-line bg-bg/70 backdrop-blur-xl">
         <div className="mx-auto flex max-w-[1400px] items-center gap-3 px-4 py-2.5">
           <Link href="/" className="group flex items-center gap-2">
-            <span className="grid h-8 w-8 place-items-center rounded-xl border border-accent/30 bg-accent/10 text-accent shadow-[0_0_18px_-6px_rgba(45,212,191,0.7)] transition-transform group-hover:scale-105">
+            <span className="grid h-8 w-8 place-items-center rounded-xl border border-line bg-bg2 text-accent transition-transform group-hover:scale-105">
               ⚖
             </span>
             <span className="font-head text-lg font-extrabold tracking-tight">
@@ -75,7 +75,7 @@ export default function Nav() {
       </header>
 
       {/* mobile bottom tab bar (thumb zone) */}
-      <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-white/[0.06] bg-bg/85 backdrop-blur-xl md:hidden">
+      <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-bg/85 backdrop-blur-xl md:hidden">
         <div className="mx-auto grid max-w-[600px] grid-cols-6">
           {ITEMS.map((it) => {
             const active = isActive(it.href);
